@@ -43,25 +43,24 @@ const allData: CatagoryData[] = [
 
 const Catagory = () => {
   return (
-    
-      <div className="flex justify-center items-center w-full">
-        <div className="flex items-center py-6 px-10 gap-10 bg-[#81C157]  rounded-3xl">
-          {allData.map((item) => (
-            <div>
-                <div className="p-2 rounded-full bg-black/5">
-                    <div className=" flex flex-col gap-5 bg-white rounded-full p-6 aspect-square">
-              <img src={item.img} alt=""/>
+    <div className="flex justify-center items-center w-full ">
+      <div className="flex items-center py-6 px-10 gap-10 bg-[#81C157]  rounded-3xl">
+        {allData.map((item) => (
+          <div>
+            <div className="p-2 rounded-full  bg-black/5">
+              <div className=" flex flex-col gap-5 bg-white rounded-full p-6 ">
+                <img src={item.img} alt="" />
+              </div>
             </div>
-                </div>
-              {item.title}
-            </div>
-          ))}
-        </div>
+            <div className=" text-center ">{item.title}</div>
+            
+          </div>
+        ))}
+
       </div>
-    
+
+    </div>
   );
 };
 
 export default Catagory;
-
-

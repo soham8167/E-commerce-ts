@@ -6,15 +6,17 @@ import AddProduct from "../components/layout/AddProduct";
 import SeasonalFood from "../components/layout/SeasonalFood";
 import Body from "../components/layout/Body";
 import Footer from "../components/layout/Footer";
+import Seasonal from "../components/layout/Seasonal";
+
+
 
 const Home = () => {
   return (
     <div
-      className="max-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: `url(${bgimg})` }}
+      className="max-h-screen bg-cover bg-center "
+      style={{ backgroundImage: `url(${bgimg})`}}
     >
       
-      <div className="absolute inset-0 bg-black/40"></div>
 
      <Header/>
 
@@ -25,29 +27,38 @@ const Home = () => {
            ECOLOGIGALLY & RESPONSIBLY GROWNFOOD
           </h3>
           <h5>We supply highly quality organic products</h5><br/>
-          <button className="bg-green-400 rounded-full text-lg h-10 w-30 flex justify-center hover:text-blue-500 cursor-pointer">Shop Now</button>
+          <button className="bg-green-400 rounded-full text-lg h-10 w-30 flex justify-center items-center hover:text-blue-500 cursor-pointer">Shop Now</button>
         </div>
        
       </div>
      <div className="-mt-20 relative ">
         <Catagory/>
+        <br/>
+     <span className="text-[#00814E] font-bold text-3xl rounded flex justify-center uppercase">Best Sellor</span>
+
      </div>
-     <br/>
-      <span className="bg-green-600 text-2xl">Best Sellers</span>
-      <br/>
-      <br/>
+    
+      
       <Card/>
-      <br/>
-      <span className="bg-green-600 text-2xl rounded">View more</span>
-      <br/>
-      <br/>
+      
+      
       <AddProduct/>
-      <br/>
-      <SeasonalFood/>
-      <br/>
-      <Body/>
-      <br/>
-      <Footer/>
+     <div className="mt-8">
+        <Seasonal/>
+     </div>
+      <div className="mt-8">
+        <SeasonalFood/>
+      </div>
+     
+      <div className="mt-12">
+        <Body/>
+      </div>
+  
+      
+      <div className="mt-10">
+        <Footer/>
+      </div>
+
     </div>
   );
 };

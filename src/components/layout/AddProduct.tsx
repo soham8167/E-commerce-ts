@@ -12,50 +12,54 @@ const AddProduct = () => {
         Value Added Products
       </h2>
 
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className=" flex justify-center gap-4">
         
-        <div className="bg-[#F3BD30] rounded-2xl  p-5 flex flex-col items-center text-center">
-          <h3 className="text-lg  text-red-700 ">
+        <div className="bg-[#F3BD30] rounded-2xl  p-5 flex items-center">
+            <div className="mb-30">
+          <h3 className="text-xl font-bold  text-red-700 ">
             FARM FRESH
           </h3>
-          <h2 className="text-2xl font-bold text-black-700 mt-2">
+          <h2 className="text-4xl font-bold text-black-700 mt-2">
             GOLD
           </h2>
           <p className="text-gray-600 mt-3">
             Lorem ipsum dolor sit amet consectetur.
           </p>
-
-          <img
+          <button className="bg-[#FBF9F6] text-[#00814E] px-6 py-2 rounded-full relative top-20 cursor-pointer font-semibold">
+            Shop Now
+          </button>
+            </div>
+          <div>
+            <img
             src={img2}
             alt="Gold Product"
             className="w-40 h-auto my-6"
           />
-
-          <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full cursor-pointer">
-            Shop Now
-          </button>
+          </div>
         </div>
 
-        <div className="bg-[#F9CF3A] rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
-          <h3 className="text-lg  text-red-500">
+        <div className="bg-[#F9CF3A] rounded-2xl  p-5 flex items-center">
+            <div className="mb-30">
+          <h3 className="text-xl font-bold  text-red-700 ">
             FARM FRESH
           </h3>
-          <h2 className="text-2xl font-bold text-green-700 mt-2">
-            PREMIUM
+          <h2 className="text-4xl font-bold text-black-700 mt-2">
+            GOLD
           </h2>
           <p className="text-gray-600 mt-3">
             Lorem ipsum dolor sit amet consectetur.
           </p>
-
-          <img
-            src={img3}
-            alt="Premium Product"
-            className="w-40 h-auto my-6"
-          />
-
-          <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full cursor-pointer">
+          <button className="bg-[#FBF9F6] text-[#00814E] px-6 py-2 rounded-full relative top-20 cursor-pointer font-semibold">
             Shop Now
           </button>
+            </div>
+          <div>
+            <img
+            src={img3}
+            alt="Gold Product"
+            className="w-40 h-auto my-6"
+          />
+          </div>
         </div>
 
       </div>

@@ -4,7 +4,6 @@ import c1 from "../../assets/images/c1.png";
 import c2 from "../../assets/images/c2.png";
 import c3 from "../../assets/images/c3.png";
 import c4 from "../../assets/images/c4.png";
-import { useState } from "react";
 
 
 interface Product {
@@ -69,33 +68,14 @@ const products: Product[] = [
 
 const Card = () => {
 
-   const [items, setItems] = useState<Product[]>(products);
-
-
-     const handleIncrement = (id: number) => {
-    setItems(prev =>
-      prev.map(item =>
-        item.id === id
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
-      )
-    );
-  };
-
-  const handleDecrement = (id: number) => {
-    setItems(prev =>
-      prev.map(item =>
-        item.id === id && item.quantity > 1
-          ? { ...item, quantity: item.quantity - 1 }
-          : item
-      )
-    );
-  };
+   
 
 
   return (
-    <div className="flex flex-wrap gap-8 justify-center">
-      {items.map((item) => (
+    <>
+   
+    <div className="flex flex-wrap gap-8 justify-center m-5">
+      {products.map((item) => (
         <div
           key={item.id}
           className="bg-[#d2ccc4] w-65 rounded-2xl p-4 shadow-md relative"
@@ -141,13 +121,13 @@ const Card = () => {
       
           <div className="flex items-center justify-between mt-4">
             <div className="flex items-center gap-2">
-              <button onClick={()=> handleDecrement(item.id)}  className="border rounded-full px-3 py-2 hover:bg-gray-100 cursor-pointer">
+              <button className="border rounded-full px-3 py-2 hover:bg-gray-100 cursor-pointer">
                 <Minus size={10} />
               </button>
               <div className="border rounded-md px-4 py-2 font-medium">
       {item.quantity}
     </div>
-              <button onClick={()=>handleIncrement(item.id)} className="border rounded-full px-3 py-2 hover:bg-gray-100 cursor-pointer">
+              <button  className="border rounded-full px-3 py-2 hover:bg-gray-100 cursor-pointer">
                 <Plus size={10} />
               </button>
             </div>
@@ -159,7 +139,13 @@ const Card = () => {
           </div>
         </div>
       ))}
+     
+
+
+
     </div>
+      <button className="relative left-170 m-3 bg-[#00814E] text-3xl p-3 rounded-full text-[#FFFFFF]">View more</button>
+ </>
   );
 };
 
