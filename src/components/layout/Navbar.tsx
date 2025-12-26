@@ -1,20 +1,65 @@
+import { FiMenu, FiX } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
+import { useNavStore } from "../../store/store";
 
 const Navbar = () => {
-  const links = ["About Bhoomi", "Combos", "Fruits", "Veggies", "Exotic", "Subscriptions","Recipies"];
+  const navigate = useNavigate();
+  const { isOpen, toggleMenu } = useNavStore();
+
+  const links = [
+    { label: "ABOUT BHOOMI", path: "/about" },
+    { label: "COMBOS", path: "/combo" },
+    { label: "FRUITS", path: "/fruit" },
+    { label: "VEGGIES", path: "/veg" },
+    { label: "EXOTIC", path: "/exotic" },
+    { label: "SUBSCRIPTIONS", path: "/subscription" },
+    { label: "RECIPES", path: "/recipe" },
+  ];
+
+  const handleNavigate = (path: string) => {
+    navigate(path);
+    toggleMenu(); // close menu after click
+  };
 
   return (
-    <nav>
-      <ul className="flex gap-5 text-sm font-medium">
-        {links.map((item, index) => (
+    <>
+      {/* 🔹 Mobile Toggle Button */}
+      <div className="md:hidden ">
+        <button onClick={toggleMenu} className="p-2">
+          {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
+        </button>
+      </div>
+
+      {/* 🔹 Mobile Menu (FULL WIDTH & RESPONSIVE) */}
+      {isOpen && (
+        <div className="fixed inset-x-0 top-18 z-50 md:hidden ">
+          <ul className=" mx-12 bg-white rounded-2xl shadow-xl  flex flex-col gap-2 text-center text-sm font-semibold">
+            {links.map((item) => (
+              <li
+                key={item.path}
+                onClick={() => handleNavigate(item.path)}
+                className="py-2 cursor-pointer hover:text-[#5E8E2D]"
+              >
+                {item.label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* 🔹 Desktop Menu */}
+      <ul className="hidden md:flex gap-6 text-white text-sm font-medium">
+        {links.map((item) => (
           <li
-            key={index}
-            className="cursor-pointer hover:text-yellow-300 "
+            key={item.path}
+            onClick={() => navigate(item.path)}
+            className="cursor-pointer hover:underline"
           >
-            {item}
+            {item.label}
           </li>
         ))}
       </ul>
-    </nav>
+    </>
   );
 };
 

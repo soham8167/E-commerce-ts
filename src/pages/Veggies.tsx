@@ -1,17 +1,26 @@
-import Header from "../components/layout/Header"
-import bgimg from '../assets/images/Rectangle 122.png'
+import bgimg from "../assets/images/Rectangle 122.png";
+import Footer from "../components/layout/Footer";
+import Card from "../components/layout/veggies/card";
+import Catagory from "../components/layout/veggies/Catatory";
 
 const Veggies = () => {
   return (
-    <div className="max-h-screen  bg-center relative"
-      style={{ backgroundImage: `url(${bgimg})`}}>
-        <Header/>
-        <div className=" h-screen ">
-       
-       
-      </div>
-    </div>
-  )
-}
+    <div className="pt-20">
+      <div
+        className="min-h-screen bg-no-repeat bg-center bg-contain"
+        style={{ backgroundImage: `url(${bgimg})` }}
+      />
 
-export default Veggies
+      <div className="-mt-45 px-4">
+        <Catagory />
+      </div>
+
+      <div className="mt-10">
+        <Card/>
+      </div>
+      <div><Footer/></div>
+    </div>
+  );
+};
+
+export default Veggies;

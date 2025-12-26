@@ -1,8 +1,8 @@
 import { Minus, Plus, ShoppingCart } from "lucide-react";
-import { useStore } from "../../store/store";
+import { vegcardStore } from "../../../store/vegCardStore";
 
-const Card = () => {
-  const { products, increment, decrement } = useStore();
+const Veggiescard = () => {
+  const { products, increment, decrement } = vegcardStore();
 
   return (
     <>
@@ -71,11 +71,9 @@ const Card = () => {
           </div>
         ))}
       </div>
-      <button className="relative left-170 m-3 bg-[#00814E] text-3xl p-3 rounded-full text-[#FFFFFF]">
-        View more
-      </button>
+      
     </>
   );
 };
 
-export default Card;
+export default Veggiescard;

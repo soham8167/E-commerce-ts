@@ -1,11 +1,11 @@
 // Catagory.tsx
-import p1 from "../../assets/images/bestseller.png";
-import p2 from "../../assets/images/exotic 1.png";
-import p3 from "../../assets/images/fruit 1.png";
-import p4 from "../../assets/images/greens 1.png";
-import p5 from "../../assets/images/ready-cook 1.png";
-import p6 from "../../assets/images/ready-eat 1.png";
-import p7 from "../../assets/images/cabbage 1.png";
+import p1 from "../../../assets/images/bestseller.png";
+import p2 from "../../../assets/images/exotic 1.png";
+import p3 from "../../../assets/images/fruit 1.png";
+import p4 from "../../../assets/images/greens 1.png";
+import p5 from "../../../assets/images/ready-cook 1.png";
+import p6 from "../../../assets/images/ready-eat 1.png";
+import p7 from "../../../assets/images/cabbage 1.png";
 
 interface CatagoryData {
   img: string;
@@ -24,7 +24,7 @@ const allData: CatagoryData[] = [
 const Catagory = () => {
   return (
     <div className="flex justify-center w-full px-2 sm:px-10">
-      <div className="grid grid-cols-2 sm:grid-cols-7 gap-6 sm:gap-10 py-6 bg-[#81C157] rounded-3xl w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-7 gap-6 sm:gap-10 py-6  rounded-3xl w-full">
         {allData.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
             <div className="p-2 rounded-full bg-black/5">

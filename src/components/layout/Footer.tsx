@@ -7,16 +7,17 @@ import a5 from '../../assets/images/image 97.svg'
 import a6 from '../../assets/images/image 98.svg'
 import a7 from '../../assets/images/image 99.svg'
 import a8 from '../../assets/images/image 100.svg'
+
 const Footer = () => {
   return (
-    <div className="bg-gray-100 px-6 py-10">
+    <div className="bg-gray-100 px-4 sm:px-6 py-10">
       <div className="text-center mb-10">
-        <h2 className="text-xl font-semibold mb-4">JOIN OUR MAILING LIST</h2>
-        <div className="flex justify-center gap-2">
+        <h2 className="text-lg sm:text-xl font-semibold mb-4">JOIN OUR MAILING LIST</h2>
+        <div className="flex flex-col sm:flex-row justify-center gap-2">
           <input
             type="text"
             placeholder="Email Address"
-            className="px-4 py-2 border rounded-md w-64"
+            className="px-4 py-2 border rounded-md w-full sm:w-64"
           />
           <button className="bg-[#7C6345] text-white px-4 py-2 rounded-md">
             Subscribe
@@ -24,65 +25,49 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left">
         <div>
-          <img src={logo} alt="logo" className="mb-4 w-32" />
-          <p className="text-sm text-[#7C6345]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </p>
-          <p className="text-sm text-[#7C6345] mt-2">
-            Lorem ipsum dolor sit amet consectetur.
-          </p>
+          <img src={logo} alt="logo" className="mb-4 w-32 mx-auto sm:mx-0" />
+          <p className="text-sm text-[#7C6345]">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p className="text-sm text-[#7C6345] mt-2">Lorem ipsum dolor sit amet consectetur.</p>
         </div>
 
-        <div>
-          <p  className="text-[#7C6345]" >About Us</p>
-          <p  className="text-[#7C6345]">Careers</p>
+        <div className="flex flex-col gap-2">
+          <p className="text-[#7C6345]">About Us</p>
+          <p className="text-[#7C6345]">Careers</p>
           <p className="text-[#7C6345]">Social</p>
           <p className="text-[#7C6345]">Boxes</p>
           <p className="text-[#7C6345]">Fruits</p>
         </div>
 
-        <div>
-          <p  className="text-[#7C6345]">Privacy Policy</p>
-          <p  className="text-[#7C6345]">Terms & Conditions</p>
-          <p  className="text-[#7C6345]">Refund Policy</p>
-          <p  className="text-[#7C6345]">Faqs</p>
+        <div className="flex flex-col gap-2">
+          <p className="text-[#7C6345]">Privacy Policy</p>
+          <p className="text-[#7C6345]">Terms & Conditions</p>
+          <p className="text-[#7C6345]">Refund Policy</p>
+          <p className="text-[#7C6345]">Faqs</p>
         </div>
 
         <div>
-          <p  className="text-[#7C6345]">Contact us on</p>
-          
-          <h4 className=" text-[#7C6345] font-bold text-lg">1111111111</h4>
-          <br/>
-          <div className="flex gap-2 ">
-            <p  className="text-[#7C6345]">Follow our Journey </p>
-     <div className="flex rounded-full gap-2 ">
-        <div className="border bg-white rounded-full p-1">
-          <img src={a1}/>
+          <p className="text-[#7C6345]">Contact us on</p>
+          <h4 className="text-[#7C6345] font-bold text-lg">1111111111</h4>
+
+          <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-2 justify-center sm:justify-start">
+            <p className="text-[#7C6345]">Follow our Journey</p>
+            <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+              {[a1, a2, a3, a4].map((icon, idx) => (
+                <div key={idx} className="border bg-white rounded-full p-1">
+                  <img src={icon} alt={`icon-${idx}`} />
+                </div>
+              ))}
+            </div>
           </div>
-     <div className="border bg-white rounded-full p-1">
-          <img src={a2}/>
+
+          <div className="flex flex-wrap gap-2 mt-2 justify-center sm:justify-start">
+            {[a5, a6, a7, a8].map((img, idx) => (
+              <img key={idx} src={img} alt={`img-${idx}`} className="w-8 h-8" />
+            ))}
           </div>
-     <div className="border bg-white rounded-full p-1">
-          <img src={a3}/>
-          </div>
-     <div className="border bg-white rounded-full p-1">
-          <img src={a4}/>
-          </div>
- 
-     </div>
-    
-          </div>
-          <div className="flex m-1 gap-1 relative right-4 top-4 ">
-        <img src={a5}/>
-        <img src={a6}/>
-        <img src={a7}/>
-        <img src={a8}/>
-     </div>
         </div>
- 
       </div>
     </div>
   );

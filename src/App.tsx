@@ -1,14 +1,14 @@
-import './App.css'
-import AppRoutes from './routes/AppRoutes'
+import Header from "./components/layout/Header";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
-  
-
   return (
     <>
-      <AppRoutes/>
+      <Header/>
+
+     <AppRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
