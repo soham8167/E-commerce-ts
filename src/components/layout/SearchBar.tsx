@@ -2,12 +2,17 @@ import group from "../../assets/images/Group.svg";
 import cart from "../../assets/images/cart.svg";
 import vector from "../../assets/images/Vector.svg";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { useNavigate } from "react-router-dom";
+import { useCartStore } from "../../store/cardStore";
+import { useWishlistStore } from "../../store/wishListStore";
 
 const SearchBar = () => {
+  const navigate = useNavigate();
+  const { items } = useCartStore();
+  const { items: wishlistItems } = useWishlistStore();
   return (
     <div className="w-full">
       <div className="flex items-center gap-4">
-
         {/* Search Input */}
         <div className="relative flex-1">
           <input
@@ -20,11 +25,41 @@ const SearchBar = () => {
 
         {/* Icons */}
         <div className="flex items-center gap-2">
-          <img src={group} alt="" className="w-5 h-5 cursor-pointer" />
-          <img src={vector} alt="" className="w-5 h-5 cursor-pointer" />
-          <img src={cart} alt="" className="w-5 h-5 cursor-pointer" />
-        </div>
+          <img
+            src={group}
+            alt="profile"
+            className="w-5 h-5 cursor-pointer"
+            onClick={() => navigate("/login")}
+          />
 
+          <div
+            className="relative cursor-pointer"
+            onClick={() => navigate("/wishlist")}
+          >
+            <img src={vector} className="w-5 h-5" />
+
+            {wishlistItems.length > 0 && (
+              <span
+                className="absolute -top-2 -right-2 bg-red-500 text-white text-xs
+                           w-4 h-4 rounded-full flex items-center justify-center"
+              >
+                {wishlistItems.length}
+              </span>
+            )}
+          </div>
+          <div
+            className="relative cursor-pointer"
+            onClick={() => navigate("/cart")}
+          >
+            <img src={cart} alt="cart" className="w-5 h-5" />
+
+            {items.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs w-4 h-4 rounded-full flex items-center justify-center">
+                {items.length}
+              </span>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

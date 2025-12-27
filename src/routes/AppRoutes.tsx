@@ -9,6 +9,10 @@ import Recipes from "../pages/Recipes";
 import Subscriptions from "../pages/Subscriptions";
 import Notfound from "../pages/Notfound";
 import ProductDetails from "../pages/ProductDetails";
+import Cart from "../pages/Cart";
+import Wishlist from "../pages/Wishlist";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -21,6 +25,10 @@ const AppRoutes = () => {
       <Route path="/recipe" element={<Recipes />} />
       <Route path="/subscription" element={<Subscriptions />} />
       <Route path="/product/:id" element={<ProductDetails/>} />
+      <Route path="/cart" element={<Cart/>} />
+      <Route path="/wishlist" element={<Wishlist/>} />
+      <Route path="/login" element={<Login/>} />
+      <Route path="/signup" element={<Signup/>} />
       <Route path="*" element={<Notfound/>} />
     </Routes>
   );

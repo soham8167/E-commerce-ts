@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 
 const Header = () => {
+  const navigate = useNavigate()
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div className="px-4 pt-3">
@@ -17,8 +19,11 @@ const Header = () => {
               alt="Bhoomi Farmers"
               className="h-12 sm:h-14 object-contain"
             />
+          <div className="bg-amber-400 w-20 h-8 flex justify-center rounded-full items-center">
+            <strong className="cursor-pointer" onClick={() => navigate("/")}>Home</strong>
+            </div>
+            {/* Search Bar (Desktop)  */}
 
-            {/* Search Bar (Desktop) */}
             <div className="hidden md:block flex-1 max-w-2xl">
               <SearchBar />
             </div>

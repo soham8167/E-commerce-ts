@@ -1,10 +1,10 @@
 import { create } from 'zustand'
 import type { NavState, StoreState} from '../type/type'
 
-import c1 from '../assets/images/c1.png';
-import c2 from "../assets/images/c2.png";
-import c3 from "../assets/images/c3.png";
-import c4 from "../assets/images/c4.png";
+import c1 from '../assets/images/p1.png';
+import c2 from "../assets/images/p2.png";
+import c3 from "../assets/images/p3.png";
+import c4 from "../assets/images/p4.png";
 
 
 // for hamburger 

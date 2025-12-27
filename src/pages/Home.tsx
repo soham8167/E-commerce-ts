@@ -1,4 +1,3 @@
-import Header from "../components/layout/Header";
 import bgimg from "../assets/images/background.png";
 import Card from "../components/layout/Card";
 import Catagory from "../components/layout/Catagory";
@@ -10,8 +9,7 @@ import Seasonal from "../components/layout/Seasonal";
 
 const Home = () => {
   return (
-    <div className="w-full overflow-x-hidden">
-      <Header />
+    <div className="w-full overflow-hidden">
 
       <div
         className="min-h-screen bg-cover bg-center pt-20"
