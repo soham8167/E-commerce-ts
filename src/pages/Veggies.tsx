@@ -1,5 +1,4 @@
 import bgimg from "../assets/images/Rectangle 122.png";
-import Footer from "../components/layout/Footer";
 import Card from "../components/layout/veggies/Card";
 import Catagory from "../components/layout/veggies/Catatory";
 
@@ -18,7 +17,6 @@ const Veggies = () => {
       <div className="mt-10">
         <Card/>
       </div>
-      <div><Footer/></div>
     </div>
   );
 };

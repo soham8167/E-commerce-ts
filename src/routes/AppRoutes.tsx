@@ -13,6 +13,7 @@ import Cart from "../pages/Cart";
 import Wishlist from "../pages/Wishlist";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
+import Checkout from "../pages/Checkout";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -27,6 +28,7 @@ const AppRoutes = () => {
       <Route path="/product/:id" element={<ProductDetails/>} />
       <Route path="/cart" element={<Cart/>} />
       <Route path="/wishlist" element={<Wishlist/>} />
+      <Route path="/checkout" element={<Checkout/>} />
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />
       <Route path="*" element={<Notfound/>} />

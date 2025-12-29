@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import { vegStore } from "../store/vegstore";
 import bgimg from "../assets/images/Rectangle 122.png";
-import Footer from "../components/layout/Footer";
 import Veggiescard from "../components/layout/veggies/Veggiescard";
 import { useCardDetailsStore } from "../store/cardDetailsStore";
 import { useCartStore } from "../store/cardStore";
@@ -166,7 +165,6 @@ const ProductDetails = () => {
 
       <div className="h-20" />
       <Veggiescard />
-      <Footer />
     </div>
   );
 };

@@ -4,7 +4,17 @@ import { create } from 'zustand'
 import c1 from '../assets/images/c1.png';
 import c2 from "../assets/images/c2.png";
 import c3 from "../assets/images/c3.png";
-import c4 from "../assets/images/c4.png";
+import z3 from "../assets/images/z3.png";
+import z2 from "../assets/images/z2.png";
+import z1 from "../assets/images/z1.png";
+import z4 from "../assets/images/z4.png";
+import z5 from "../assets/images/z5.png";
+import z6 from "../assets/images/z6.png";
+import z7 from "../assets/images/z7.png";
+import z8 from "../assets/images/z8.png";
+import z9 from "../assets/images/z9.png";
+import z10 from "../assets/images/z10.png";
+import z11 from "../assets/images/z11.png";
 import type { vegStoreState } from "../type/vegtype";
 
 export const vegStore = create<vegStoreState>((set) =>({
@@ -23,7 +33,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 2,
       title: "Ooty Baby Potato",
-      image: c2,
+      image: z3,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -34,7 +44,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 3,
       title: "Ooty Baby Potato",
-      image: c3,
+      image: z2,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -45,7 +55,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 4,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z1,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -56,7 +66,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 5,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z10,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -67,7 +77,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 6,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z4,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -78,7 +88,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 7,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z1,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -89,7 +99,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 8,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: c2,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -100,7 +110,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 9,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: c3,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -110,7 +120,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 10,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z9,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -120,7 +130,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 11,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z8,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -131,7 +141,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 12,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z7,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -142,7 +152,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 13,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z6,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -153,7 +163,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 14,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z5,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,
@@ -163,7 +173,7 @@ export const vegStore = create<vegStoreState>((set) =>({
     {
       id: 15,
       title: "Ooty Baby Potato",
-      image: c4,
+      image: z11,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,

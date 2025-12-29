@@ -30,7 +30,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* 🔹 Mobile Menu (FULL WIDTH & RESPONSIVE) */}
+      {/*  Mobile Menu */}
       {isOpen && (
         <div className="fixed inset-x-0 top-18 z-50 md:hidden ">
           <ul className=" mx-12 bg-white rounded-2xl shadow-xl  flex flex-col gap-2 text-center text-sm font-semibold">

@@ -1,8 +1,9 @@
 import {create} from 'zustand'
-import c1 from '../assets/images/c1.png';
-import c2 from "../assets/images/c2.png";
-import c3 from "../assets/images/c3.png";
-import c4 from "../assets/images/c4.png";
+import c1 from '../assets/images/z15.png';
+import c2 from "../assets/images/z14.png";
+import c3 from "../assets/images/z13.png";
+import c4 from "../assets/images/z12.png";
+import c5 from "../assets/images/z16.png";
 import type { vegCardState } from '../type/vegcardtype';
 
 
@@ -46,6 +47,17 @@ export const vegcardStore = create<vegCardState>((set) =>({
       id: 4,
       title: "Ooty Baby Potato",
       image: c4,
+      weight: "1Kg",
+      originalPrice: 120,
+      price: 80,
+      discount: 20,
+      quantity: 1,
+      bestSeller: true,
+    },
+    {
+      id: 5,
+      title: "Ooty Baby Potato",
+      image: c5,
       weight: "1Kg",
       originalPrice: 120,
       price: 80,

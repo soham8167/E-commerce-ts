@@ -1,6 +1,11 @@
 const Seasonal = () => {
   return (
-    <div className="flex flex-col gap-5 px-4 sm:px-10">
+    <div className="flex flex-col gap-5 px-4 sm:px-10 mt-10">
+     <p className="flex justify-center text-[#B09764] tracking-[0.35em]  text-sm">
+  IN SEASON
+</p>
+
+      
       <h2 className="text-2xl sm:text-3xl font-bold text-[#00814E] text-center">
         ENJOY OUR SEASONAL FOODS
       </h2>

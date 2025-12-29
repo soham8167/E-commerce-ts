@@ -12,13 +12,13 @@ interface CatagoryData {
   title: string;
 }
 const allData: CatagoryData[] = [
-  { img: p1, title: "Hello" },
-  { img: p2, title: "Hello" },
-  { img: p3, title: "Hello" },
-  { img: p4, title: "Hello" },
-  { img: p5, title: "Hello" },
-  { img: p6, title: "Hello" },
-  { img: p7, title: "Hello" },
+  { img: p1, title: "Best Sellers" },
+  { img: p2, title: "Greens" },
+  { img: p3, title: "Veggies" },
+  { img: p4, title: "Exotics" },
+  { img: p5, title: "Fruits" },
+  { img: p6, title: "Ready to Cook" },
+  { img: p7, title: "Ready to Eat" },
 ];
 
 const Catagory = () => {
@@ -32,7 +32,7 @@ const Catagory = () => {
                 <img src={item.img} alt="" className="w-16 h-16 sm:w-auto sm:h-auto" />
               </div>
             </div>
-            <div className="text-center mt-2 text-xs sm:text-base">{item.title}</div>
+            <div className="text-center mt-2 text-xs sm:text-base text-[#FFFFFF]">{item.title}</div>
           </div>
         ))}
       </div>

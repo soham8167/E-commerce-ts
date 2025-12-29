@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <div className="px-4 pt-3">
-        <div className="bg-white rounded-2xl shadow-md px-6 py-3 -mt-3">
+        <div className="bg-white rounded-b-2xl shadow-md px-6 py-3 -mt-3">
 
           {/* 🔹 Top Section */}
           <div className="flex items-center justify-between gap-6">
@@ -18,10 +18,9 @@ const Header = () => {
               src={logo}
               alt="Bhoomi Farmers"
               className="h-12 sm:h-14 object-contain"
+              onClick={() => navigate("/")}
             />
-          <div className="bg-amber-400 w-20 h-8 flex justify-center rounded-full items-center">
-            <strong className="cursor-pointer" onClick={() => navigate("/")}>Home</strong>
-            </div>
+          
             {/* Search Bar (Desktop)  */}
 
             <div className="hidden md:block flex-1 max-w-2xl">
