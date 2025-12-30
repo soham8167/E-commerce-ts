@@ -77,21 +77,21 @@ const ProductDetails = () => {
                 Add to Cart
               </button>
 
-              <button
-                onClick={() =>
-                  addToWishlist({
-                    id: product.id,
-                    title: product.title,
-                    price: product.price,
-                    image: product.image,
-                    weight: product.weight,
-                  })
-                }
-                className="cursor-pointer border border-green-600 text-green-600 px-6 py-3
-               rounded-md w-full sm:w-auto"
-              >
-                Add to Wishlist
-              </button>
+          <button
+  onClick={() =>
+    addToWishlist({
+      id: product.id,
+      title: product.title,
+      price: product.price ?? 0, 
+      image: product.image,
+      weight: product.weight ?? "N/A",  
+    })
+  }
+  className="cursor-pointer border border-green-600 text-green-600 px-6 py-3 rounded-md w-full sm:w-auto"
+>
+  Add to Wishlist
+</button>
+
             </div>
 
             {/* 🔹 Tabs */}

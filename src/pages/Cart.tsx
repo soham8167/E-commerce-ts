@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const { items, increment, decrement, removeItem } = useCartStore();
 
-  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const total = items.reduce((sum, i) => sum + (i.price ?? 0 )* i.quantity, 0);
   const navigate = useNavigate();
 
   return (
@@ -66,7 +66,7 @@ const Cart = () => {
             {/* Total */}
             <div className="flex justify-between md:block">
               <span className="md:hidden text-sm text-gray-500">Total</span>
-              <span>₹{item.price * item.quantity}</span>
+              <span>₹{(item.price ?? 0) * item.quantity}</span>
             </div>
 
             {/* Tax */}
