@@ -6,37 +6,48 @@ import p4 from "../../../assets/images/greens 1.png";
 import p5 from "../../../assets/images/ready-cook 1.png";
 import p6 from "../../../assets/images/ready-eat 1.png";
 import p7 from "../../../assets/images/cabbage 1.png";
+import p8 from "../../../assets/images/i5.png";
+import p9 from "../../../assets/images/i6.png";
+import p10 from "../../../assets/images/i7.png";
+
 
 interface CatagoryData {
   img: string;
-  title: string;
 }
 const allData: CatagoryData[] = [
-  { img: p1, title: "Hello" },
-  { img: p2, title: "Hello" },
-  { img: p3, title: "Hello" },
-  { img: p4, title: "Hello" },
-  { img: p5, title: "Hello" },
-  { img: p6, title: "Hello" },
-  { img: p7, title: "Hello" },
+  { img: p1 },
+  { img: p2 },
+  { img: p3 },
+  { img: p4},
+  { img: p5 },
+  { img: p6 },
+  { img: p7 },
+  { img: p8 },
+  { img: p9 },
+  { img: p10 },
 ];
 
 const Catagory = () => {
   return (
     <div className="flex justify-center w-full px-2 sm:px-10">
-      <div className="grid grid-cols-2 sm:grid-cols-7 gap-6 sm:gap-10 py-6  rounded-3xl w-full">
-        {allData.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <div className="p-2 rounded-full bg-black/5">
-              <div className="flex flex-col gap-4 bg-white rounded-full p-4">
-                <img src={item.img} alt="" className="w-16 h-16 sm:w-auto sm:h-auto" />
-              </div>
-            </div>
-            <div className="text-center mt-2 text-xs sm:text-base">{item.title}</div>
+  <div
+    className=" grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-10 gap-3 lg:gap-1 py-6 rounded-3xl w-full max-w-7xl ml-12">
+    {allData.map((item, index) => (
+      <div key={index} className="flex justify-center">
+        <div className="p-2 rounded-full bg-black/5">
+          <div className="bg-white rounded-full p-4 flex items-center justify-center">
+            <img
+              src={item.img}
+              alt=""
+              className="w-14 h-14 object-contain"
+            />
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
   );
 };
 

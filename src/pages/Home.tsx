@@ -16,11 +16,11 @@ const Home = () => {
       >
         <div className="flex items-center justify-center min-h-screen px-4 text-white text-center">
           <div >
-            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h3 className="font-bebas text-6xl sm:text-4xl md:text-5xl  mb-4 tracking-wide">
               ECOLOGIGALLY & RESPONSIBLY 
             </h3>
            
-            <h3 className="text-3xl sm:text-4xl md:text-5xl  mb-4 flex">GROWNFOOD</h3>
+            <h3 className="font-bebas  sm:text-4xl md:text-5xl  mb-4  flex tracking-wide ">GROWN FOOD</h3>
             <h5 className="text-sm sm:text-base flex">
               We supply highly quality organic products
             </h5>
@@ -38,7 +38,7 @@ const Home = () => {
         <Catagory />
         <br />
         
-        <span className="text-[#00814E] font-bold  sm:text-2xl md:text-3xl flex justify-center uppercase text-center  text-3xl">
+        <span className="text-[#00814E] font-bebas  sm:text-2xl md:text-3xl flex justify-center uppercase text-center  text-3xl">
           Best Sellor
         </span>
        

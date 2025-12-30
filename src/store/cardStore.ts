@@ -34,7 +34,7 @@ export const useCartStore = create<CartState>()(
           ),
         })),
 
-      // 🔒 Decrement stops at 1
+      //  Decrement stops at 1
       decrement: (id) =>
         set((state) => ({
           items: state.items.map(i =>
@@ -50,7 +50,7 @@ export const useCartStore = create<CartState>()(
         })),
     }),
     {
-      name: "bhoomi-cart-storage", // 👈 localStorage key
+      name: "bhoomi-cart-storage", //  localStorage key
     }
   )
 );

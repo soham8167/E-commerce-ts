@@ -2,12 +2,15 @@ export interface Product {
   id: number;
   title: string;
   image: string;
-  weight: string;
-  originalPrice: number;
-  price: number;
-  discount: number;
-  quantity: number;
+  icon1:string,
+  icon2 ?: string;
+  weight ?: string;
+  originalPrice ?: number;
+  price ?: number;
+  discount ?: number;
+  quantity : number ;
   bestSeller?: boolean;
+  msg?:string;
 }
 
 
