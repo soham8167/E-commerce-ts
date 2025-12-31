@@ -11,10 +11,8 @@ const Header = () => {
       <div className="px-4 sm:px-6">
         <div className="bg-white rounded-b-2xl shadow-md">
           
-          {/* Top Row */}
           <div className="flex items-center justify-between gap-4 px-4 py-3">
             
-            {/* Logo */}
             <img
               src={logo}
               alt="Bhoomi Farmers"
@@ -22,7 +20,7 @@ const Header = () => {
               onClick={() => navigate("/")}
             />
 
-            {/* Desktop Search */}
+            {/* Desktop */}
             <div className="hidden md:flex flex-1 max-w-xl justify-end">
               <SearchBar />
             </div>
@@ -33,7 +31,6 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile Search */}
           <div className="block md:hidden px-4 pb-3">
             <SearchBar />
           </div>
@@ -47,7 +44,7 @@ const Header = () => {
                          shadow-lg rounded-br-2xl"
               style={{
                 clipPath:
-                  "polygon(10% 15%, 100% 8%, 100% 100%, 0% 100%, 3% 20%)",
+                  "polygon(10% 20%, 100% 8%, 100% 100%, 0% 100%, 3% 20%)",
               }}
             >
               <Navbar />

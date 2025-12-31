@@ -5,6 +5,7 @@ import Veggiescard from "../components/layout/veggies/Veggiescard";
 import { useCardDetailsStore } from "../store/cardDetailsStore";
 import { useCartStore } from "../store/cardStore";
 import { useWishlistStore } from "../store/wishListStore";
+import v1 from '../assets/images/v1.svg'
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const ProductDetails = () => {
       {/* 🔹 Banner */}
       <div className="flex justify-center mt-5">
         <div
-          className="w-[92%] sm:w-[88%] md:w-[80%] lg:w-[70%]
+          className="w-[92%] sm:w-[88%] md:w-full mt-30 lg:w-[70%]
                      h-35 sm:h-50 md:h-65
                      bg-cover bg-center rounded-2xl"
           style={{ backgroundImage: `url(${bgimg})` }}
@@ -47,7 +48,7 @@ const ProductDetails = () => {
 
           {/* Right */}
           <div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold">
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold text-[#E27148]">
               {product.title.toUpperCase()} ({product.weight})
             </h2>
 
@@ -62,7 +63,9 @@ const ProductDetails = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mt-6 ">
-              <button
+             
+              <div className="cursor-pointer bg-orange-500 text-white px-6 py-3 rounded-md w-full sm:w-auto">
+                <button
                 onClick={() =>
                   addToCart({
                     id: product.id,
@@ -72,25 +75,29 @@ const ProductDetails = () => {
                     weight: product.weight,
                   })
                 }
-                className="cursor-pointer bg-orange-500 text-white px-6 py-3 rounded-md w-full sm:w-auto"
+                
               >
                 Add to Cart
               </button>
+              </div>
 
-          <button
+          <div className="cursor-pointer border border-green-600 text-green-600 px-4 py-3 rounded-md w-full sm:w-auto flex gap-4" >
+                <img src={v1}/>
+     <button
   onClick={() =>
     addToWishlist({
       id: product.id,
       title: product.title,
       price: product.price ?? 0, 
       image: product.image,
-      weight: product.weight ?? "N/A",  
+      weight: product.weight ?? "No value",  
     })
   }
-  className="cursor-pointer border border-green-600 text-green-600 px-6 py-3 rounded-md w-full sm:w-auto"
 >
   Add to Wishlist
 </button>
+
+          </div>
 
             </div>
 
@@ -105,7 +112,7 @@ const ProductDetails = () => {
                       className={`pb-2 px-3 transition cursor-pointer
                       ${
                         activeTab === tab
-                          ? "border-b-2 border-green-600 text-green-600 font-medium"
+                          ? "border-b-2 border-[#B09764] text-[#613812] font-medium bg-[#F3EFE7]"
                           : "text-gray-500 hover:text-green-600"
                       }`}
                     >

@@ -22,7 +22,6 @@ const Checkout = () => {
           {/* LEFT SECTION */}
           <div className="lg:col-span-2 space-y-8">
 
-            {/* Address */}
             <div className="  rounded-lg p-5">
               <h3 className="font-semibold mb-4 ">
                 Billing / Shipping Address
@@ -30,7 +29,7 @@ const Checkout = () => {
 
               
 <div className="space-y-3">
-  {/* Address with circle icon */}
+  {/* Address  */}
   <div className="flex items-start gap-3">
     <div className="w-6 h-6 rounded-full bg-[#e0e0e0] flex items-center justify-center">
       <img src={i1} alt="address-icon" className="w-3 h-5" />
@@ -45,7 +44,6 @@ const Checkout = () => {
     + Add new address
   </button>
 
-  {/* Smaller textarea */}
   <textarea
     placeholder="Type your order notes here"
     className="w-full border rounded-md p-2 text-sm h-20 resize-none"
@@ -57,36 +55,30 @@ const Checkout = () => {
 
             </div>
 
-            {/* Payment */}
             
 <div className="bg-white rounded-xl p-4 sm:p-5 w-full -mt-10">
   <h3 className="font-semibold text-base mb-4">Payment</h3>
 
-  {/* Payment cards */}
   <div className="grid grid-cols-1 sm:grid-cols-3 gap-1">
 
-    {/* Cash on Delivery */}
     <div
       className="relative bg-[#FBF9F6] rounded-lg p-3 h-23
                  w-full max-w-45 cursor-pointer"
     >
-      {/* top-left circle */}
       <span className="absolute top-3 left-3 w-3.5 h-3.5 border border-gray-400 rounded-full" />
 
-      {/* top-right icon */}
       <img
         src={i2}
         alt="cod"
         className="absolute top-3 right-3 w-9 h-9 object-contain"
       />
 
-      {/* bottom text */}
       <div className="absolute bottom-3 left-3">
         <p className="text-sm font-medium">Cash on Delivery</p>
       </div>
     </div>
 
-    {/* Bhoomi Wallet */}
+    {/* Bhoomi */}
     <div
       className="relative bg-[#FBF9F6] rounded-lg p-3 h-23
                  w-full max-w-45 cursor-pointer"
@@ -105,7 +97,6 @@ const Checkout = () => {
       </div>
     </div>
 
-    {/* Credit / Debit Card */}
     <div
       className="relative bg-[#FBF9F6] rounded-lg p-3 h-23
                  w-full max-w-45 cursor-pointer"
@@ -125,7 +116,6 @@ const Checkout = () => {
 
   </div>
 
-  {/* Bottom buttons */}
   <div className="flex flex-col sm:flex-row gap-3 mt-15">
     <button className="border border-gray-300 px-5 py-2.5 rounded-lg
                        text-sm w-full sm:w-auto">
@@ -149,7 +139,6 @@ const Checkout = () => {
     Delivery Date <span className="font-medium">1st January 2025</span>
   </p>
 
-  {/* Divider */}
   <div className="border-t border-dashed my-3" />
 
   <div className="text-sm space-y-3">
@@ -174,7 +163,6 @@ const Checkout = () => {
     </div>
   </div>
 
-  {/* Divider */}
   <div className="border-t border-dashed my-4" />
 
   <div className="flex justify-between font-semibold text-base">

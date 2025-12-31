@@ -7,10 +7,15 @@ import a5 from '../../assets/images/image 97.svg'
 import a6 from '../../assets/images/image 98.svg'
 import a7 from '../../assets/images/image 99.svg'
 import a8 from '../../assets/images/image 100.svg'
+import a9 from '../../assets/images/path800.svg'
+
 
 const Footer = () => {
   return (
-    <div className="bg-gray-100 px-4 sm:px-6 py-10">
+    <div className="bg-gray-100 px-4 sm:px-6 py-10 mt-10">
+      <div className="flex justify-center relative bottom-15">
+        <img src={a9}/>
+      </div>
       <div className="text-center mb-10">
         <h2 className="text-lg sm:text-xl font-semibold mb-4">JOIN OUR MAILING LIST</h2>
         <div className="flex flex-col sm:flex-row justify-center gap-2">
