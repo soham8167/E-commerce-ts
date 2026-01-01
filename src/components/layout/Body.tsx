@@ -1,4 +1,3 @@
-import c10 from '../../assets/images/path800.svg'
 const Body = () => {
   return (
     
@@ -21,9 +20,7 @@ const Body = () => {
         Minu
         </p>
       </div>
-      <div className="flex justify-center relative z-10 top-10">
-  <img src={c10} className="max-w-5xl h-auto " />
-</div>
+      
 
     </div>
     

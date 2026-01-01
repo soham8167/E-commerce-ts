@@ -23,3 +23,12 @@ body {
   --font-bebas-neue: "Bebas Neue", sans-serif;
 } */
 
+
+
+
+
+.scroll-apper{
+  animation: apper linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}

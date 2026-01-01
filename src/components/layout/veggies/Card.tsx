@@ -2,6 +2,8 @@
 import { Minus, Plus, ShoppingCart } from "lucide-react";
 import { vegStore } from "../../../store/vegstore";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 const Card = () => {
   const { products, increment, decrement } = vegStore();
@@ -11,7 +13,9 @@ const Card = () => {
   
 
   return (
-    <div className="flex flex-wrap gap-8 justify-center m-5">
+    
+
+    <div className="flex flex-wrap gap-8 justify-center m-5 ">
       {products.map((item, index) => {
         
         if (index === 1) {
@@ -75,11 +79,22 @@ const Card = () => {
 
       
           return (
+            <motion.div
+  key={item.id}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+  viewport={{ once: true }}
+  
+>
           <div
             key={item.id}
             
             className="bg-[#FBF9F6] border-[#A59786] w-60 rounded-2xl p-4 shadow-md relative  hover:scale-105 transition"
           >
+
+
+
             {item.bestSeller && (
               <span className="absolute top-3 left-3 bg-[#EF7F00] text-white text-xs px-3 py-1 rounded-full">
                 Best Seller
@@ -166,11 +181,15 @@ const Card = () => {
                 <ShoppingCart size={15} /> Cart
               </button>
             </div>
+           
+
           </div>
+            </motion.div>
         );
       })}
     
     </div>
+   
   );
 };
 
