@@ -129,6 +129,8 @@ const ProductDetails = () => {
                 <button
                   onClick={() =>
                     addToWishlist({
+                      variantId: selectedVariant.id,
+
                       id: product.id,
                       title: product.title,
                       price: selectedVariant.price,

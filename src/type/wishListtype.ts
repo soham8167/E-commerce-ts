@@ -4,6 +4,7 @@ export interface WishlistItem {
   price: number;
   image: string;
   weight: string;
+  variantId: number;
 }
 
 export interface WishlistState {
