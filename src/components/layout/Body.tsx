@@ -1,7 +1,16 @@
+
+import { motion } from "framer-motion";
 const Body = () => {
   return (
     
     <div className="bg-[#E9F0EB] px-4 sm:px-10 py-10">
+      <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.9,delay:0.7 , ease: "easeOut" }}
+  viewport={{ once: true }}
+>
+
       
       <div className="text-center mb-6">
         <p className="flex justify-center text-[#B09764] tracking-[0.35em]  text-sm mb-3">
@@ -20,7 +29,7 @@ const Body = () => {
         Minu
         </p>
       </div>
-      
+      </motion.div>
 
     </div>
     

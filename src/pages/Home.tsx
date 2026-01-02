@@ -11,7 +11,7 @@ const Home = () => {
     <div className="w-full overflow-hidden">
 
       <div
-        className="flex justify-start items-start min-h-screen bg-cover bg-center pt-10 pl-10"
+        className="flex justify-start items-start min-h-screen bg-cover bg-center pt-10 pl-10 fade-zoom"
         style={{ backgroundImage: `url(${bgimg})` }}
       >
         <div className="flex items-center justify-center min-h-screen px-4 text-white text-center">
@@ -55,7 +55,6 @@ const Home = () => {
      <div className="mt-4">
        <Body />
      </div>
-      
     </div>
   );
 };

@@ -1,18 +1,29 @@
 import { Minus, Plus, ShoppingCart } from "lucide-react";
 import { useStore } from "../../store/store";
 import made from '../../assets/images/made.svg'
+import { motion } from "framer-motion";
 
 const Card = () => {
   const { products, increment, decrement } = useStore();
 
   return (
     <>
+     
       <div className="flex flex-wrap gap-16 justify-center m-15">
-        {products.map((item) => (
+        {products.map((item,index) => (
+          
           <div
             key={item.id}
             className="bg-[#FBF9F6] w-60 h-105 rounded-2xl p-4 shadow-md relative"
           >
+            <motion.div
+  key={item.id}
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: 0.5 }}
+  viewport={{ once: true }}
+  
+>
             {item.bestSeller && (
               <span className="absolute top-3 left-3 bg-orange-500 text-white text-xs px-3 py-1 rounded-full">
                 Best Seller
@@ -71,6 +82,7 @@ const Card = () => {
                 Cart
               </button>
             </div>
+            </motion.div>
           </div>
         ))}
       </div>
@@ -79,7 +91,6 @@ const Card = () => {
     View more
   </button>
 </div>
-
     </>
   );
 };

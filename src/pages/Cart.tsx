@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const Cart = () => {
   const { items, increment, decrement, removeItem } = useCartStore();
 
-  const total = items.reduce((sum, i) => sum + (i.price ?? 0 )* i.quantity, 0);
+  const total = items.reduce((sum, i) => sum + (i.price ?? 0) * i.quantity, 0);
   const navigate = useNavigate();
 
   return (
@@ -13,7 +13,7 @@ const Cart = () => {
       <div className="max-w-6xl mx-auto px-4 py-32 mt-8">
         <h2 className="text-2xl font-semibold mb-6">My Cart</h2>
 
-        {/* Desktop Table Header */}
+        {/* Desktop  Header */}
         <div className="hidden md:grid grid-cols-6 text-sm font-medium text-gray-500 border-b pb-3">
           <span>Product</span>
           <span>Quantity</span>
@@ -26,7 +26,8 @@ const Cart = () => {
         {/* Cart Items */}
         {items.map((item) => (
           <div
-            key={item.id}
+            key={`${item.id}-${item.variantId}`}
+
             className="border-b py-5 md:grid md:grid-cols-6 md:items-center gap-4 space-y-4 md:space-y-0"
           >
             {/* Product */}
@@ -44,8 +45,8 @@ const Cart = () => {
 
               <div className="flex items-center gap-2">
                 <button
+                  onClick={() => decrement(item.id, item.variantId)}
                   className="w-6 h-6 border rounded-full flex items-center justify-center cursor-pointer"
-                  onClick={() => decrement(item.id)}
                 >
                   <Minus size={14} />
                 </button>
@@ -56,7 +57,7 @@ const Cart = () => {
 
                 <button
                   className="w-6 h-6 border rounded-full flex items-center justify-center cursor-pointer"
-                  onClick={() => increment(item.id)}
+                  onClick={() => increment(item.id, item.variantId)}
                 >
                   <Plus size={14} />
                 </button>
@@ -89,7 +90,7 @@ const Cart = () => {
                 </span>
                 <span>₹0.00</span>
               </div>
-              <button onClick={() => removeItem(item.id)}>
+              <button onClick={() => removeItem(item.id, item.variantId)}>
                 <Trash2 size={16} className="  text-red-500 cursor-pointer" />
               </button>
             </div>
@@ -123,7 +124,6 @@ const Cart = () => {
 
         <div className="text-right mt-4 font-semibold">Total: ₹{total}</div>
       </div>
-      
     </>
   );
 };

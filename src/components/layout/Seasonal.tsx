@@ -1,5 +1,7 @@
 const Seasonal = () => {
   return (
+
+
     <div className="flex flex-col gap-5 px-4 sm:px-10 mt-10">
      <p className="flex justify-center text-[#B09764] tracking-[0.35em]  text-sm">
   IN SEASON
@@ -15,6 +17,7 @@ const Seasonal = () => {
         </p>
       </div>
     </div>
+    
   )
 }
 

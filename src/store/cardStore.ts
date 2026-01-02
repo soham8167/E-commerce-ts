@@ -1,21 +1,29 @@
+
+
+
+
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { CartState } from "../type/cardStoretype";
 
-
 export const useCartStore = create<CartState>()(
-  persist (
+  persist(
     (set) => ({
       items: [],
 
       addToCart: (product) =>
         set((state) => {
-          const abc= state.items.find(i => i.id === product.id);
+          const existing = state.items.find(
+            (i) =>
+              i.id === product.id &&
+              i.variantId === product.variantId
+          );
 
-          if (abc) {
+          if (existing) {
             return {
-              items: state.items.map(i =>
-                i.id === product.id
+              items: state.items.map((i) =>
+                i.id === product.id &&
+                i.variantId === product.variantId
                   ? { ...i, quantity: i.quantity + 1 }
                   : i
               ),
@@ -27,30 +35,55 @@ export const useCartStore = create<CartState>()(
           };
         }),
 
-      increment: (id) =>
+      increment: (id, variantId) =>
         set((state) => ({
-          items: state.items.map(i =>
-            i.id === id ? { ...i, quantity: i.quantity + 1 } : i
-          ),
-        })),
-
-      //  Decrement stops at 1
-      decrement: (id) =>
-        set((state) => ({
-          items: state.items.map(i =>
-            i.id === id && i.quantity > 1
-              ? { ...i, quantity: i.quantity - 1 }
+          items: state.items.map((i) =>
+            i.id === id && i.variantId === variantId
+              ? { ...i, quantity: i.quantity + 1 }
               : i
           ),
         })),
 
-      removeItem: (id) =>
+      decrement: (id, variantId) =>
+        set((state) => {
+          const item = state.items.find(
+            (i) => i.id === id && i.variantId === variantId
+          );
+
+          if (!item) return state;
+
+          if (item.quantity === 1) {
+            return {
+              items: state.items.filter(
+                (i) =>
+                  !(i.id === id && i.variantId === variantId)
+              ),
+            };
+          }
+
+          return {
+            items: state.items.map((i) =>
+              i.id === id && i.variantId === variantId
+                ? { ...i, quantity: i.quantity - 1 }
+                : i
+            ),
+          };
+        }),
+
+      removeItem: (id, variantId) =>
         set((state) => ({
-          items: state.items.filter(i => i.id !== id),
+          items: state.items.filter(
+            (i) =>
+              !(i.id === id && i.variantId === variantId)
+          ),
         })),
     }),
     {
-      name: "bhoomi-cart-storage", //  localStorage key
+      name: "bhoomi-cart-storage",
     }
   )
 );
+
+
+
+

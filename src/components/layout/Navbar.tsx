@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const handleNavigate = (path: string) => {
     navigate(path);
-    toggleMenu(); // close menu after click
+    toggleMenu(); 
   };
 
   return (

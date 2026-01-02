@@ -36,15 +36,15 @@ const Header = () => {
           </div>
 
           {/* Desktop Navbar with Clip */}
-          <div className="hidden md:block relative h-16">
+          <div className="hidden md:block relative h-14">
             <div
               className="absolute right-0 bottom-0 bg-[#5E8E2D] 
-                         w-[92%] h-[85%] 
-                         px-6 flex items-center justify-end 
+                         w-[90%] h-[85%] 
+                         px-4 flex items-center justify-end 
                          shadow-lg rounded-br-2xl"
               style={{
                 clipPath:
-                  "polygon(10% 20%, 100% 8%, 100% 100%, 0% 100%, 3% 20%)",
+                  "polygon(10% 16%, 100% 8%, 100% 100%, 0% 100%, 3% 20%)",
               }}
             >
               <Navbar />

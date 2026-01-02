@@ -27,8 +27,18 @@ body {
 
 
 
-.scroll-apper{
-  animation: apper linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
+
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.fade-zoom {
+  animation: fadeZoom 1s ease-out forwards;
 }

@@ -1,16 +1,18 @@
+
 export interface CartItem {
-  id: number;
+  id: number;           
+  variantId: number;    
   title: string;
-  price: number  | undefined;
+  price: number | undefined;
   image: string;
-  weight : string  | undefined;
+  weight: string | undefined;
   quantity: number;
 }
 
 export interface CartState {
   items: CartItem[];
   addToCart: (product: Omit<CartItem, "quantity">) => void;
-  increment: (id: number) => void;
-  decrement: (id: number) => void;
-  removeItem: (id: number) => void;
+  increment: (id: number, variantId: number) => void;
+  decrement: (id: number, variantId: number) => void;
+  removeItem: (id: number, variantId: number) => void;
 }

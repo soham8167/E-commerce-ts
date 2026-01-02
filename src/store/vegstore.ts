@@ -26,12 +26,16 @@ export const vegStore = create<vegStoreState>((set) =>({
       title: "Ooty Baby Potato",
       image: c1,
       icon1:z12,
-      weight: "1Kg",
+      weight: "500 gms",
       originalPrice: 120,
-      price: 80,
+      price: 40,
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "500 gms", price: 40 },
+        { id: 2, weight: "1.5 Kg", price: 120 },
+      ],
     },
     {
       id: 2,
@@ -50,12 +54,16 @@ export const vegStore = create<vegStoreState>((set) =>({
       title: "Dry Fruit Laddus",
       image: z2,
       icon1:z12,
-      weight: "150 gms",
+      weight: "300 gms",
       originalPrice: 120,
-      price: 80,
+      price: 160,
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "300 gms", price: 160 },
+        { id: 2, weight: "1 Kg", price: 600 },
+      ],
     },
     {
       id: 4,
@@ -69,6 +77,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "150 gms", price: 120 },
+        { id: 2, weight: "500 gms", price: 300 },
+      ],
     },
     {
       id: 5,
@@ -82,6 +94,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+       variants: [
+        { id: 1, weight: "600 gms", price: 80 },
+        { id: 2, weight: "1 kg", price: 100 },
+      ],
     },
     {
       id: 6,
@@ -106,6 +122,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+       variants: [
+        { id: 1, weight: "200 gms", price: 40 },
+        { id: 2, weight: "500 gms", price: 100 },
+      ],
     },
     {
       id: 8,
@@ -118,6 +138,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "350 gms", price: 80 },
+        { id: 2, weight: "500 gms", price: 100 },
+      ],
     },
     {
       id: 9,
@@ -129,17 +153,25 @@ export const vegStore = create<vegStoreState>((set) =>({
       price: 80,
       discount: 20,
       quantity: 1,
+      variants: [
+        { id: 1, weight: "1 piece", price: 80 },
+        { id: 2, weight: "5 piece", price: 350 },
+      ],
     },
     {
       id: 10,
       title: "Cauliflower Big",
       image: z9,
       icon1:z12,
-      weight: "1000gms",
+      weight: "1 kg",
       originalPrice: 120,
       price: 80,
       discount: 20,
       quantity: 1,
+      variants: [
+        { id: 1, weight: "1 kg", price: 120 },
+        { id: 2, weight: "2 kg", price: 200 },
+      ],
     },
     {
       id: 11,
@@ -152,6 +184,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "100 gms", price: 129 },
+        { id: 2, weight: "500 gms", price: 500 },
+      ],
     },
     {
       id: 12,
@@ -164,6 +200,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "3 piece", price: 159 },
+        { id: 2, weight: "5 piece", price: 249 },
+      ],
     },
     {
       id: 13,
@@ -175,6 +215,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "100 gms", price: 99 },
+        { id: 2, weight: "500 gms", price: 499 },
+      ],
     },
     {
       id: 14,
@@ -186,6 +230,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       price: 299,
       discount: 20,
       quantity: 1,
+      variants: [
+        { id: 1, weight: "150 gms", price: 299 },
+        { id: 2, weight: "500 gms", price: 699 },
+      ],
     },
     {
       id: 15,
@@ -198,6 +246,10 @@ export const vegStore = create<vegStoreState>((set) =>({
       discount: 20,
       quantity: 1,
       bestSeller: true,
+      variants: [
+        { id: 1, weight: "500 gms", price: 60 },
+        { id: 2, weight: "1 kg", price: 100 },
+      ],
     },
     
   ],
@@ -220,6 +272,14 @@ increment: (id) =>
       ),
     })),
 }))
+
+
+
+
+
+
+
+
 
 
 

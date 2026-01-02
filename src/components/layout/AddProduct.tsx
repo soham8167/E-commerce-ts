@@ -3,9 +3,20 @@ import img2 from "../../assets/images/Group 112.png";
 import img3 from "../../assets/images/Group 113.png";
 import img4 from "../../assets/images/Rectangle 168.png";
 import img5 from "../../assets/images/Rectangle 169.png";
+import { motion } from "framer-motion";
+
 
 const AddProduct = () => {
   return (
+
+    <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 2 , delay:  0.7 }}
+
+  viewport={{ once: true }}
+  
+>
     <div
       className="bg-cover bg-center py-16 px-4"
       style={{ backgroundImage: `url(${img1})` }}
@@ -15,6 +26,8 @@ const AddProduct = () => {
       </h2>
 
       <div className="flex flex-col sm:flex-row justify-center gap-6">
+        
+
         {/* CARD 1 */}
         <div
           className="rounded-2xl p-5 flex flex-col sm:flex-row items-center gap-4 
@@ -78,6 +91,7 @@ const AddProduct = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };
 
