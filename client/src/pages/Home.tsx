@@ -102,7 +102,7 @@ const navigate = useNavigate();
                 Ecologically & Responsibly
               </h2>
 
-              <h4 className="font-light text-2xl sm:text-4xl md:text-6xl lg:text-5xl mb-4 tracking-wider ">
+              <h4 className="font-light text-2xl sm:text-3xl md:text-6xl lg:text-5xl mb-4 tracking-wider ">
                 GROWN FOOD
               </h4>
 
