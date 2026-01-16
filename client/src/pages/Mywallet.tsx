@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import walleticon from "../assets/images/Vector.svg";
+import walleticon from "../assets/images/Vector1.svg";
 
 const Mywallet = () => {
     const navigate = useNavigate();

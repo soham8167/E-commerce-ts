@@ -1,6 +1,6 @@
 import group from "../../assets/images/Group.svg";
 import cart from "../../assets/images/cart.svg";
-import vector from "../../assets/images/Vector.svg";
+import vector from "../../assets/images/v1.svg";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import { useCartStore } from "../../store/cardStore";
