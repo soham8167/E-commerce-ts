@@ -15,6 +15,8 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Checkout from "../pages/Checkout";
 import Privacy from "../pages/Privacy";
+import Mywallet from "../pages/Mywallet";
+import MyWalletOpen from "../pages/MyWalletOpen";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -31,6 +33,8 @@ const AppRoutes = () => {
       <Route path="/wishlist" element={<Wishlist/>} />
       <Route path="/checkout" element={<Checkout/>} />
       <Route path="/privacy" element={<Privacy/>} />
+      <Route path="/mywallet" element={<Mywallet/>} />
+      <Route path="/mywalletopen" element={<MyWalletOpen/>} />
 
       <Route path="/login" element={<Login/>} />
       <Route path="/signup" element={<Signup/>} />

@@ -35,7 +35,7 @@ const Login = () => {
 
     if (email === user.email && password === user.password) {
       alert("Login successful");
-      navigate("/");
+      navigate("/mywallet");
     } else {
       alert("Incorrect email or password");
     }
